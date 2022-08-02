@@ -2,33 +2,29 @@ import React from "react"
 import Layout from "../components/Layout"
 import Seo from "../components/Seo"
 import styled from "styled-components"
-import { B1Black, H1Dark, H2DarkTeal } from "../styles/helpers"
 
 const IndexPage = () => {
   return (
     <Layout>
       <Seo title="CAH Home Page" />
-      <SectionStyled>
-        <h1>CAH Annual Return</h1>
-        <h2>CAH Annual Return</h2>
-        <p>CAH Annual Return</p>
-      </SectionStyled>
+      <SpaceSection id="keeping-score">
+        <h1>Keeping Score</h1>
+      </SpaceSection>
+      <SpaceSection id="going-the-distance">
+        <h1>Going The distance</h1>
+      </SpaceSection>
+      <SpaceSection id="advocacy">
+        <h1>Advocacy in Full Swing</h1>
+      </SpaceSection>
+      <SpaceSection id="path-forward">
+        <h1>The Path Forward</h1>
+      </SpaceSection>
     </Layout>
   )
 }
 
-const SectionStyled = styled.section`
-  h1 {
-    ${H1Dark};
-  }
-
-  h2 {
-    ${H2DarkTeal};
-  }
-
-  p {
-    ${B1Black}
-  }
+const SpaceSection = styled.div`
+  min-height: 500px;
 `
 
 export default IndexPage

@@ -3,13 +3,14 @@ import { fontSizer } from "./index"
 import { css } from "styled-components"
 
 const Btn1Base = css`
-  ${fontSizer(1.4, 1.6, 76.8, 150, 1.8)};
+  ${fontSizer(1.4, 1.8, 76.8, 150, 1.8)};
   position: relative;
   display: inline-block;
-  padding: 0.75rem 2rem;
+  padding: 0.25rem 3rem;
   border: none;
+  border-radius: 3rem;
   transition: all 0.3s ease;
-  font-weight: normal;
+  font-weight: bold;
   font-stretch: normal;
   font-style: normal;
   line-height: 2.14;
@@ -29,89 +30,12 @@ const Btn1Base = css`
 
 export const Btn1One = css`
   ${Btn1Base};
-  padding-right: 7.5rem;
-  background: linear-gradient(
-    250deg,
-    rgba(9, 9, 121, 0) 18%,
-    rgba(31, 82, 127, 1) 18%
-  );
+  background-color: ${colors.colorAccent};
   color: ${colors.white};
 
   &:hover {
-    background: linear-gradient(
-      250deg,
-      rgba(9, 9, 121, 0) 18%,
-      rgba(157, 181, 148, 1) 18%
-    );
-    color: ${colors.colorSecondary};
-  }
-
-  &:focus {
-    transition: all 0.35s ease-in-out;
-  }
-
-  &:disabled {
-    opacity: 0.5;
-
-    &:hover {
-      background: ${colors.white};
-      color: ${colors.colorPrimary};
-      cursor: not-allowed;
-    }
-  }
-`
-
-export const Btn1Two = css`
-  ${Btn1Base};
-  padding-right: 7.5rem;
-  background: linear-gradient(
-    250deg,
-    rgba(9, 9, 121, 0) 18%,
-    rgba(136, 184, 223, 1) 18%
-  );
-  color: ${colors.colorPrimary};
-
-  &:hover {
-    background: linear-gradient(
-      250deg,
-      rgba(9, 9, 121, 0) 18%,
-      rgba(157, 181, 148, 1) 18%
-    );
-    color: ${colors.white};
-  }
-
-  &:focus {
-    transition: all 0.35s ease-in-out;
-  }
-
-  &:disabled {
-    opacity: 0.5;
-
-    &:hover {
-      background: ${colors.white};
-      color: ${colors.colorPrimary};
-      cursor: not-allowed;
-    }
-  }
-`
-
-export const Btn1Three = css`
-  ${Btn1Base};
-  padding-right: 7.5rem;
-  background: linear-gradient(
-    250deg,
-    rgba(9, 9, 121, 0) 18%,
-    rgba(255, 255, 255, 1) 18%
-  );
-  color: ${colors.colorPrimary};
-
-  &:hover {
-    background: linear-gradient(
-      250deg,
-      rgba(9, 9, 121, 0) 18%,
-      rgba(157, 181, 148, 1) 18%
-    );
-    color: ${colors.white};
+    color: ${colors.colorTertiary};
+    background-color: ${colors.colorPrimary};
   }
 
   &:focus {
