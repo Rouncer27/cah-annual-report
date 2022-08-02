@@ -3,7 +3,7 @@ const themeColors = {
   colorSecondary: "#043b49",
   colorTertiary: "#f9a11b",
   colorAccent: "#62a7c4",
-  colorShad: "#043b49",
+  colorShad: "#212326",
   white: "rgba(255,255,255, 1)",
   grey: "rgba(226,232,233, 1)",
   greyMed: "rgba(120,119,124, 1)",

@@ -4,11 +4,11 @@ import { css } from "styled-components"
 
 // Headline Styles #1 //
 export const H1Base = css`
-  ${fontSizer(3.25, 5.5, 76.8, 150, 3)};
-  font-weight: 600;
+  ${fontSizer(3.2, 5.7, 76.8, 150, 3)};
+  font-weight: 500;
   font-stretch: normal;
   font-style: normal;
-  line-height: 1.03;
+  line-height: 0.95;
   letter-spacing: normal;
 `
 
@@ -22,18 +22,18 @@ export const H1White = css`
   color: ${colors.white};
 `
 
-export const H1Blue = css`
+export const H1Dark = css`
   ${H1Base};
-  color: ${colors.colorPrimary};
+  color: ${colors.colorShad};
 `
 
 // Headline Styles #2 //
 export const H2Base = css`
-  ${fontSizer(2.5, 3.8, 76.8, 150, 2.5)};
-  font-weight: 600;
+  ${fontSizer(2.5, 3.5, 76.8, 150, 2.5)};
+  font-weight: normal;
   font-stretch: normal;
   font-style: normal;
-  line-height: 1.18;
+  line-height: 1.32;
   letter-spacing: normal;
 `
 
@@ -47,19 +47,9 @@ export const H2Black = css`
   color: ${colors.black};
 `
 
-export const H2Green = css`
+export const H2DarkTeal = css`
   ${H2Base};
   color: ${colors.colorSecondary};
-`
-
-export const H2Blue = css`
-  ${H2Base};
-  color: ${colors.colorPrimary};
-`
-
-export const H2LightBlue = css`
-  ${H2Base};
-  color: ${colors.colorAccent};
 `
 
 // Headline Styles #3 //
@@ -70,35 +60,6 @@ export const H3Base = css`
   font-style: normal;
   line-height: 1.43;
   letter-spacing: normal;
-`
-
-export const H3White = css`
-  ${H3Base};
-  color: ${colors.white};
-`
-
-export const H3Black = css`
-  ${H3Base};
-  color: ${colors.black};
-`
-
-export const H3SkyBlue = css`
-  ${H3Base};
-  color: ${colors.colorAccent};
-`
-export const H3Blue = css`
-  ${H3Base};
-  color: ${colors.colorPrimary};
-`
-
-export const H3Green = css`
-  ${H3Base};
-  color: ${colors.colorSecondary};
-`
-
-export const H3LightGreen = css`
-  ${H3Base};
-  color: ${colors.colorTertiary};
 `
 
 // Headline Styles #4 //
