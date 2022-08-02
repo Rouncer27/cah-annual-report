@@ -4,15 +4,14 @@ import Seo from "../components/Seo"
 import styled from "styled-components"
 
 import Opening from "../components/Opening"
+import KeepingScore from "../components/KeepingScore"
 
 const IndexPage = () => {
   return (
     <Layout>
       <Seo title="CAH Home Page" />
       <Opening />
-      <SpaceSection id="keeping-score">
-        <h1>Keeping Score</h1>
-      </SpaceSection>
+      <KeepingScore />
       <SpaceSection id="going-the-distance">
         <h1>Going The distance</h1>
       </SpaceSection>
