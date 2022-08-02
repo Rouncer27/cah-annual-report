@@ -3,10 +3,13 @@ import Layout from "../components/Layout"
 import Seo from "../components/Seo"
 import styled from "styled-components"
 
+import Opening from "../components/Opening"
+
 const IndexPage = () => {
   return (
     <Layout>
       <Seo title="CAH Home Page" />
+      <Opening />
       <SpaceSection id="keeping-score">
         <h1>Keeping Score</h1>
       </SpaceSection>
