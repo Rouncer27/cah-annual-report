@@ -1,9 +1,9 @@
 import React from "react"
-import { Link } from "gatsby"
+import MobileNav from "./MobileNav/MobileNav"
 
-const Header = ({ siteTitle }) => (
+const Header = () => (
   <header>
-    <Link to="/">{siteTitle}</Link>
+    <MobileNav />
   </header>
 )
 
