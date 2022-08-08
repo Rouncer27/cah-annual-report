@@ -6,6 +6,7 @@ import styled from "styled-components"
 import Opening from "../components/Opening"
 import KeepingScore from "../components/KeepingScore"
 import GoingDistance from "../components/GoingDistance"
+import Advocacy from "../components/Advocacy"
 
 const IndexPage = () => {
   return (
@@ -14,9 +15,7 @@ const IndexPage = () => {
       <Opening />
       <KeepingScore />
       <GoingDistance />
-      <SpaceSection id="advocacy">
-        <h1>Advocacy in Full Swing</h1>
-      </SpaceSection>
+      <Advocacy />
       <SpaceSection id="path-forward">
         <h1>The Path Forward</h1>
       </SpaceSection>
