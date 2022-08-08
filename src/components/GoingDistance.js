@@ -1,6 +1,13 @@
 import React from "react"
 import styled from "styled-components"
-import { B1Black, H1Black, H1Dark, medWrapper } from "../styles/helpers"
+import {
+  B1Black,
+  H1Black,
+  H1Dark,
+  H2DarkTeal,
+  medWrapper,
+  Btn1One,
+} from "../styles/helpers"
 
 import families from "../images/distance/families.jpg"
 import peopleReached from "../images/distance/people-reached.jpg"
@@ -9,6 +16,7 @@ import subscibers from "../images/distance/subscibers.jpg"
 import unique from "../images/distance/unique.jpg"
 import views from "../images/distance/views.jpg"
 import topGrahpic from "../images/top-graphic.png"
+import logo from "../images/cah-logo.png"
 
 const GoingDistance = () => {
   return (
@@ -100,15 +108,21 @@ const GoingDistance = () => {
         </div>
 
         <div className="testimonial">
-          <div></div>
-          <div>
-            <p>
+          <div className="testimonial__logo">
+            <img src={logo} alt="" />
+          </div>
+          <div className="testimonial__content">
+            <p className="testimonial__content--para">
               “Having CAH as collaborators means we are only limited by our
               imagination as resources and partnerships are more readily
               available now than we could ever have imagined.”
             </p>
-            <p>— Scott Godfrey, Program Coordinator, Active Life,</p>
-            <p>Autism Aspergers Friendship Society of Calgary</p>
+            <p className="testimonial__content--name">
+              — Scott Godfrey, Program Coordinator, Active Life,
+            </p>
+            <p className="testimonial__content--org">
+              Autism Aspergers Friendship Society of Calgary
+            </p>
             <a href="https://www.calgaryadaptedhub.com/about">
               Connect and Collaborate with us
             </a>
@@ -199,6 +213,40 @@ const StyledSection = styled.section`
           ${B1Black};
           margin-top: 0.75rem;
         }
+      }
+    }
+  }
+
+  .testimonial {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    &__logo {
+      width: 20%;
+      padding-right: 4.1rem;
+    }
+
+    &__content {
+      width: 80%;
+
+      &--para {
+        ${H2DarkTeal};
+        margin-bottom: 1.5rem;
+      }
+
+      &--name {
+        ${B1Black};
+        margin: 0;
+      }
+
+      &--org {
+        ${B1Black};
+      }
+
+      a {
+        ${Btn1One};
       }
     }
   }
