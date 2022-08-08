@@ -129,6 +129,8 @@ const PathForward = () => {
 }
 
 const StyledSection = styled.section`
+  padding-bottom: 6rem;
+
   .upper-section {
     position: relative;
   }
