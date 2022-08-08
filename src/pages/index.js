@@ -1,12 +1,11 @@
 import React from "react"
 import Layout from "../components/Layout"
 import Seo from "../components/Seo"
-import styled from "styled-components"
-
 import Opening from "../components/Opening"
 import KeepingScore from "../components/KeepingScore"
 import GoingDistance from "../components/GoingDistance"
 import Advocacy from "../components/Advocacy"
+import PathForward from "../components/PathForward"
 
 const IndexPage = () => {
   return (
@@ -16,15 +15,9 @@ const IndexPage = () => {
       <KeepingScore />
       <GoingDistance />
       <Advocacy />
-      <SpaceSection id="path-forward">
-        <h1>The Path Forward</h1>
-      </SpaceSection>
+      <PathForward />
     </Layout>
   )
 }
-
-const SpaceSection = styled.div`
-  min-height: 500px;
-`
 
 export default IndexPage
