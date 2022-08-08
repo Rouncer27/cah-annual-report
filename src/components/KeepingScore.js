@@ -15,6 +15,7 @@ import mic from "../images/icons/mic.png"
 import paper from "../images/icons/paper.png"
 import play from "../images/icons/play.png"
 import bgImage from "../images/keeping-score-bg.jpg"
+import bgDots from "../images/top-dots-reversed.png"
 
 const KeepingScore = () => {
   return (
@@ -111,11 +112,27 @@ const KeepingScore = () => {
         <div className="bg-image" />
         <div className="bg-overlay" />
       </div>
+      <div className="bg-dots" />
     </StyledSection>
   )
 }
 
 const StyledSection = styled.section`
+  position: relative;
+  padding-top: 5rem;
+
+  .bg-dots {
+    position: absolute;
+    top: -15rem;
+    left: 0;
+    width: 100%;
+    height: 20rem;
+    background-image: url(${bgDots});
+    background-position: center;
+    background-size: cover;
+    z-index: -1;
+  }
+
   .inner {
     position: relative;
     padding: 5rem 0;

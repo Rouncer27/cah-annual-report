@@ -5,6 +5,7 @@ import styled from "styled-components"
 
 import Opening from "../components/Opening"
 import KeepingScore from "../components/KeepingScore"
+import GoingDistance from "../components/GoingDistance"
 
 const IndexPage = () => {
   return (
@@ -12,9 +13,7 @@ const IndexPage = () => {
       <Seo title="CAH Home Page" />
       <Opening />
       <KeepingScore />
-      <SpaceSection id="going-the-distance">
-        <h1>Going The distance</h1>
-      </SpaceSection>
+      <GoingDistance />
       <SpaceSection id="advocacy">
         <h1>Advocacy in Full Swing</h1>
       </SpaceSection>
