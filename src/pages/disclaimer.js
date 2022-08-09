@@ -1,6 +1,6 @@
 import React from "react"
 import Layout from "../components/Layout"
-import SEO from "../components/seo"
+import Seo from "../components/Seo"
 import styled from "styled-components"
 
 import { standardWrapper, H1Dark, B1Black, colors } from "../styles/helpers"
@@ -25,7 +25,7 @@ const Disclaimer = props => {
   const location = props.location
   return (
     <Layout location={location}>
-      <SEO
+      <Seo
         title="Disclaimer - Calgary Adapted Hub"
         description="The information contained in this website is for general information purposes only. This website makes no representations or warranties, express or implied."
         location={props.location.pathname}

@@ -1,6 +1,6 @@
 import React from "react"
 import Layout from "../components/Layout"
-import SEO from "../components/seo"
+import Seo from "../components/Seo"
 import styled from "styled-components"
 
 import {
@@ -59,7 +59,7 @@ const PrivacyPolicy = props => {
   const location = props.location
   return (
     <Layout location={location}>
-      <SEO
+      <Seo
         title="Privacy Policy - Calgary Adapted Hub"
         description="Protecting your personal information Your privacy is important to us. It is Calgary Adapted Hub policy to respect your privacy regarding any information we may collect while operating our website."
         location={props.location.pathname}
