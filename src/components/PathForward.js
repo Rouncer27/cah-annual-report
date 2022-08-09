@@ -208,9 +208,11 @@ const StyledSection = styled.section`
 
       &__content {
         width: 100%;
+        margin-top: 3rem;
 
         @media (min-width: 768px) {
           width: calc(65%);
+          margin-top: 0;
           padding: 0 7rem;
         }
 
@@ -226,9 +228,21 @@ const StyledSection = styled.section`
 
       &__icon {
         width: 100%;
+        margin-top: 3rem;
 
         @media (min-width: 768px) {
           width: calc(10%);
+          margin-top: 0;
+        }
+
+        img {
+          max-width: 12.5rem;
+          margin-left: 0;
+
+          @media (min-width: 768px) {
+            max-width: 100%;
+            margin-left: auto;
+          }
         }
       }
     }
@@ -236,7 +250,11 @@ const StyledSection = styled.section`
 
   .lower-section {
     width: 100%;
-    margin-top: -7.5rem;
+    margin-top: -5.75rem;
+
+    @media (min-width: 768px) {
+      margin-top: -7.5rem;
+    }
 
     .lower-wrapper {
       display: flex;
@@ -253,8 +271,9 @@ const StyledSection = styled.section`
 
         h2 {
           ${H2White};
-          padding: 0.5rem 0;
+          padding: 0.5rem 2rem;
           background-color: ${colors.colorTertiary};
+          text-align: center;
 
           @media (min-width: 768px) {
             padding: 0.5rem 4rem;
@@ -269,7 +288,11 @@ const StyledSection = styled.section`
 
         &__button {
           max-width: 30rem;
-          margin: 2.5rem auto 0;
+          margin: 2.5rem auto;
+
+          @media (min-width: 768px) {
+            margin: 2.5rem auto 0;
+          }
 
           a {
             ${Btn1One};
@@ -285,7 +308,13 @@ const StyledSection = styled.section`
         }
 
         &__image {
-          max-width: 30rem;
+          max-width: 20rem;
+          margin: 2.5rem auto 0;
+
+          @media (min-width: 768px) {
+            max-width: 30rem;
+            margin: auto;
+          }
         }
       }
     }

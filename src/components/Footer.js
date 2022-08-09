@@ -2,9 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { B1White, medWrapper, fontSizer, colors } from "../styles/helpers"
 
-import Youtube from "../Icons/Youtube"
 import Instagram from "../Icons/Instagram"
-import Linkedin from "../Icons/Linkedin"
 import Facebook from "../Icons/Facebook"
 import Twitter from "../Icons/Twitter"
 import { Link } from "gatsby"
@@ -90,9 +88,13 @@ const StyledFooter = styled.footer`
 
   .foot-sec {
     width: calc(100%);
+    margin-bottom: 2.5rem;
+    text-align: center;
 
     @media (min-width: 768px) {
       width: calc(25%);
+      margin-bottom: 0;
+      text-align: left;
     }
 
     h3 {
@@ -119,8 +121,12 @@ const StyledFooter = styled.footer`
   }
 
   .page-links {
-    margin-top: 1rem;
+    margin-top: 2.5rem;
     text-align: center;
+
+    @media (min-width: 768px) {
+      margin-top: 1rem;
+    }
 
     span {
       color: ${colors.white};
@@ -148,8 +154,8 @@ const StyledIcon = styled.li`
     background-color: ${colors.colorAccent};
 
     @media (min-width: 768px) {
-      width: 3rem;
-      height: 3rem;
+      width: 4rem;
+      height: 4rem;
     }
     @media (min-width: 1025px) {
       width: 4rem;
@@ -179,15 +185,15 @@ const StyledIcon = styled.li`
 
     svg {
       display: block;
-      width: 4rem;
-      height: 4rem;
+      width: 2rem;
+      height: 2rem;
       margin: auto;
       transition: all 0.3s ease-out;
       fill: ${colors.white};
 
       @media (min-width: 768px) {
-        width: 3rem;
-        height: 3rem;
+        width: 2rem;
+        height: 2rem;
       }
       @media (min-width: 1025px) {
         width: 2rem;

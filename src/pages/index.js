@@ -7,9 +7,10 @@ import GoingDistance from "../components/GoingDistance"
 import Advocacy from "../components/Advocacy"
 import PathForward from "../components/PathForward"
 
-const IndexPage = () => {
+const IndexPage = props => {
+  const location = props.location
   return (
-    <Layout>
+    <Layout location={location}>
       <Seo title="CAH Home Page" />
       <Opening />
       <KeepingScore />

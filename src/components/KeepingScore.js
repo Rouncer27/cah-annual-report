@@ -185,6 +185,7 @@ const StyledSection = styled.section`
 
     .score {
       width: 100%;
+      margin: 2rem 0;
       padding: 2rem;
       background-color: ${colors.white};
       border-radius: 18px;
@@ -192,6 +193,7 @@ const StyledSection = styled.section`
 
       @media (min-width: 768px) {
         width: calc(50%);
+        margin: 2rem;
       }
 
       @media (min-width: 1025px) {

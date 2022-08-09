@@ -1,12 +1,16 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 import styled from "styled-components"
 import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image"
 import MobileNav from "./MobileNav/MobileNav"
 import bgDots from "../images/top-dots.png"
 import { B1Black, colors, H1Dark, H2White, Btn1One } from "../styles/helpers"
 
-const Header = () => {
+import pdfDownload from "../images/priorities/pdf-download.png"
+
+const Header = ({ homepage }) => {
+  console.log("IS HOME PAGE: ", homepage)
+
   const data = useStaticQuery(graphql`
     query mainImageQuery {
       file(relativePath: { eq: "opening-image.png" }) {
@@ -24,39 +28,49 @@ const Header = () => {
       <div className="head-wrap">
         <div className="head-left">
           <div className="main-logo">
-            <StaticImage
-              src="../images/main-logo.png"
-              loading="eager"
-              quality={95}
-              formats={["auto", "webp", "avif"]}
-              alt=""
-              style={{ marginBottom: `var(--space-3)` }}
-            />
+            <Link to="/">
+              <StaticImage
+                src="../images/main-logo.png"
+                loading="eager"
+                quality={95}
+                formats={["auto", "webp", "avif"]}
+                alt=""
+                style={{ marginBottom: `var(--space-3)` }}
+              />
+            </Link>
           </div>
-          <div className="head-content">
-            <h2>Change the Game</h2>
-            <h3>Annual Report 2021 / 2022</h3>
-            <div>
-              <div></div>
-              <div>
-                <p>
-                  Keep scrolling to read our digital report or download our full
-                  report.
-                </p>
-                <a href="#">Download Full Report</a>
+          {homepage && (
+            <div className="head-content">
+              <h2>Change the Game</h2>
+              <h3>Annual Report 2021 / 2022</h3>
+              <div className="head-content__wrapper">
+                <div className="download">
+                  <div className="download__image">
+                    <img src={pdfDownload} alt="" />
+                  </div>
+                </div>
+                <div className="linkbtn">
+                  <p>
+                    Keep scrolling to read our digital report or download our
+                    full report.
+                  </p>
+                  <a href="#">Download Full Report</a>
+                </div>
               </div>
             </div>
-          </div>
+          )}
         </div>
-        <div className="head-right">
-          <div className="main-image">
-            <GatsbyImage
-              image={image}
-              alt="Calgary Adative Hub"
-              layout="fixed"
-            />
+        {homepage && (
+          <div className="head-right">
+            <div className="main-image">
+              <GatsbyImage
+                image={image}
+                alt="Calgary Adative Hub"
+                layout="fixed"
+              />
+            </div>
           </div>
-        </div>
+        )}
       </div>
       <div className="bg-dots" />
     </StyledHeader>
@@ -95,6 +109,39 @@ const StyledHeader = styled.header`
       @media (min-width: 768px) {
         padding: 0;
         text-align: right;
+      }
+
+      &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .download {
+          width: 100%;
+
+          @media (min-width: 768px) {
+            width: 50%;
+          }
+
+          &__image {
+            max-width: 20rem;
+            margin-right: auto;
+            margin-left: auto;
+
+            @media (min-width: 768px) {
+              margin-right: 0;
+              margin-left: auto;
+            }
+          }
+        }
+
+        .linkbtn {
+          width: 100%;
+
+          @media (min-width: 768px) {
+            width: 50%;
+          }
+        }
       }
 
       h2 {
@@ -136,7 +183,10 @@ const StyledHeader = styled.header`
     }
 
     .main-image {
+      display: none;
+
       @media (min-width: 768px) {
+        display: block;
         position: absolute;
         top: -10rem;
         right: -15rem;

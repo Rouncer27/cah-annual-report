@@ -152,7 +152,8 @@ const StyledSection = styled.section`
     margin-top: 7.5rem;
 
     .image {
-      width: 100%;
+      width: calc(100% - 4rem);
+      margin: 2rem 4rem;
       border-radius: 50%;
       border: solid 0.5rem ${colors.colorTertiary};
       overflow: hidden;
@@ -169,8 +170,12 @@ const StyledSection = styled.section`
   }
 
   .bottom {
-    padding: 12rem 0;
+    padding: 5rem 0;
     background-color: rgba(98, 167, 196, 0.25);
+
+    @media (min-width: 768px) {
+      padding: 12rem 0;
+    }
 
     .quote {
       display: flex;
@@ -199,9 +204,11 @@ const StyledSection = styled.section`
 
       &__image {
         width: 100%;
+        margin-top: 2.5rem;
 
         @media (min-width: 768px) {
           width: calc(20% - 4rem);
+          margin-top: 0;
           margin-left: 4rem;
           border-radius: 50%;
           border: solid 0.5rem ${colors.colorAccent};

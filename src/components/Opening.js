@@ -105,6 +105,8 @@ const SectionStyled = styled.section`
   }
 
   .images {
+    display: flex;
+    flex-wrap: wrap;
     width: 100%;
 
     @media (min-width: 768px) {
@@ -114,6 +116,20 @@ const SectionStyled = styled.section`
 
     .image {
       margin-bottom: 2rem;
+      width: calc(50% - 0.5rem);
+
+      @media (min-width: 768px) {
+        width: calc(100%);
+        margin-bottom: 2rem;
+      }
+
+      &.image-one {
+        margin-right: 0.5rem;
+      }
+
+      &.image-two {
+        margin-left: 0.5rem;
+      }
     }
   }
 

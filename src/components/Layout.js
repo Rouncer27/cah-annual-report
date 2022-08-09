@@ -7,7 +7,7 @@ import Footer from "./Footer"
 import theme from "../styles/theme/Theme"
 import GlobalStyle from "../styles/global/Golbal"
 
-const Layout = ({ children }) => {
+const Layout = props => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -22,8 +22,11 @@ const Layout = ({ children }) => {
     <>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
-        <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-        <main>{children}</main>
+        <Header
+          homepage={props.location.pathname === "/"}
+          siteTitle={data.site.siteMetadata?.title || `Title`}
+        />
+        <main>{props.children}</main>
         <Footer />
       </ThemeProvider>
     </>

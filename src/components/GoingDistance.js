@@ -137,6 +137,11 @@ const GoingDistance = () => {
 const StyledSection = styled.section`
   position: relative;
   padding-top: 2.5rem;
+  padding-bottom: 5rem;
+
+  @media (min-width: 768px) {
+    padding-bottom: 0;
+  }
 
   .top-graphic {
     position: absolute;
@@ -181,6 +186,7 @@ const StyledSection = styled.section`
 
     .box {
       width: 100%;
+      margin: 2rem 0;
       border: solid 2px #62a7c4;
 
       @media (min-width: 768px) {
@@ -224,12 +230,26 @@ const StyledSection = styled.section`
     justify-content: center;
 
     &__logo {
-      width: 20%;
-      padding-right: 4.1rem;
+      width: 100%;
+      margin-bottom: 2.5rem;
+
+      @media (min-width: 768px) {
+        width: 20%;
+        margin-bottom: 0;
+        padding-right: 4.1rem;
+      }
+
+      img {
+        max-width: 25rem;
+      }
     }
 
     &__content {
-      width: 80%;
+      width: 100%;
+
+      @media (min-width: 768px) {
+        width: 80%;
+      }
 
       &--para {
         ${H2DarkTeal};
