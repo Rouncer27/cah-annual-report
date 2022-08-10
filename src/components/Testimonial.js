@@ -14,7 +14,7 @@ const Testimonial = () => {
         scrollTrigger: {
           trigger: `#test-trigger`,
           markers: false,
-          start: "top 0%",
+          start: "top 40%",
           toggleActions: "play none none none",
         },
       })

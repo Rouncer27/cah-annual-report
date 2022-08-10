@@ -29,7 +29,7 @@ const Advocacy = () => {
         scrollTrigger: {
           trigger: `#advocacy`,
           markers: false,
-          start: "top 10%",
+          start: "top 40%",
           toggleActions: "play none none none",
         },
       })
@@ -71,7 +71,7 @@ const Advocacy = () => {
         scrollTrigger: {
           trigger: `#advocacy`,
           markers: false,
-          start: "top 10%",
+          start: "top 40%",
           toggleActions: "play none none none",
         },
       })
