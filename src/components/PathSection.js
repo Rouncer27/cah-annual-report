@@ -21,7 +21,7 @@ const PathSection = ({ img, title, content, icon, reverse, index }) => {
         scrollTrigger: {
           trigger: `#item-trigger-${index}`,
           markers: false,
-          start: "top 30%",
+          start: "top 50%",
           toggleActions: "play none none none",
         },
       })
