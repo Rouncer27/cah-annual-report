@@ -41,6 +41,34 @@ const GoingDistance = () => {
           },
         }
       )
+
+    gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: "#going-the-distance",
+          markers: false,
+          start: "top 0%",
+          toggleActions: "play none none none",
+        },
+      })
+      .from(".box__content--number", {
+        textContent: 0,
+        duration: 2,
+        ease: "power1.in",
+        snap: { textContent: 1 },
+        stagger: {
+          each: 0.25,
+          onUpdate: function () {
+            this.targets()[0].innerHTML = numberWithCommas(
+              Math.ceil(this.targets()[0].textContent)
+            )
+          },
+        },
+      })
+
+    function numberWithCommas(x) {
+      return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+    }
   }, [])
 
   return (
@@ -63,7 +91,7 @@ const GoingDistance = () => {
               <img src={peopleReached} alt="" />
             </div>
             <div className="box__content">
-              <p>780+</p>
+              <p className="box__content--number">780</p>
               <p>
                 people reached at 16 public events, conferences, trade shows,
                 and seminars (up 338% over year one)
@@ -76,7 +104,7 @@ const GoingDistance = () => {
               <img src={views} alt="" />
             </div>
             <div className="box__content">
-              <p>527</p>
+              <p className="box__content--number">527</p>
               <p>
                 views of 9 Research & Community Engagement Seminars (live and
                 on-demand)
@@ -89,7 +117,7 @@ const GoingDistance = () => {
               <img src={families} alt="" />
             </div>
             <div className="box__content">
-              <p>300+</p>
+              <p className="box__content--number">300</p>
               <p>families reached at 4 Family Resource Fairs in the region</p>
             </div>
           </div>
@@ -99,7 +127,7 @@ const GoingDistance = () => {
               <img src={unique} alt="" />
             </div>
             <div className="box__content">
-              <p>XXX</p>
+              <p className="box__content--number">1500</p>
               <p>
                 unique visitors accessed calgaryadaptedhub.com each week, on
                 average
@@ -112,7 +140,7 @@ const GoingDistance = () => {
               <img src={subscibers} alt="" />
             </div>
             <div className="box__content">
-              <p>245</p>
+              <p className="box__content--number">245</p>
               <p>subscribers received the CAH newsletter each month</p>
             </div>
           </div>
@@ -122,7 +150,7 @@ const GoingDistance = () => {
               <img src={social} alt="" />
             </div>
             <div className="box__content">
-              <p>1,340</p>
+              <p className="box__content--number">1340</p>
               <p>
                 followers on social media and growing (an increase of 74% over
                 year one)

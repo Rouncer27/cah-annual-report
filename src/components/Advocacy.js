@@ -34,6 +34,48 @@ const Advocacy = () => {
         },
       })
       .fromTo(
+        `#advocacy .title`,
+        {
+          autoAlpha: 0,
+          y: 100,
+        },
+        {
+          autoAlpha: 1,
+          ease: "power2.out",
+          y: 0,
+          duration: 2,
+          stagger: {
+            each: 0.4,
+          },
+        }
+      )
+      .fromTo(
+        `#advocacy .content`,
+        {
+          autoAlpha: 0,
+          y: 100,
+        },
+        {
+          autoAlpha: 1,
+          ease: "power2.out",
+          y: 0,
+          duration: 2,
+          stagger: {
+            each: 0.4,
+          },
+        }
+      )
+
+    gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: `#advocacy`,
+          markers: false,
+          start: "top 10%",
+          toggleActions: "play none none none",
+        },
+      })
+      .fromTo(
         `#advocacy .image`,
         {
           autoAlpha: 0,
@@ -48,6 +90,40 @@ const Advocacy = () => {
             each: 0.4,
           },
         }
+      )
+
+    gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: "#advocacy",
+          markers: false,
+          start: "top 100%",
+          end: "bottom -200px",
+          scrub: 1.5,
+        },
+      })
+      .add("start")
+      .fromTo(
+        `.stamp`,
+        {
+          y: 300,
+        },
+        {
+          ease: "none",
+          y: 0,
+        },
+        "start"
+      )
+      .fromTo(
+        `.dots`,
+        {
+          x: -200,
+        },
+        {
+          ease: "none",
+          x: 0,
+        },
+        "start"
       )
   }, [])
   return (
@@ -123,7 +199,7 @@ const StyledSection = styled.section`
 
   .stamp {
     position: absolute;
-    top: 15rem;
+    top: 7.5rem;
     right: -10rem;
     width: 25rem;
     height: 25rem;
@@ -137,8 +213,8 @@ const StyledSection = styled.section`
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 100%;
-    height: 20rem;
+    width: calc(408.6rem / 2);
+    height: calc(74.1rem / 3);
     background-image: url(${dots});
     background-position: center;
     background-size: cover;
