@@ -22,6 +22,8 @@ import bgDots from "../images/priorities/background-dots.png"
 import logo from "../images/priorities/cah-logo.png"
 import pdfDownload from "../images/priorities/pdf-download.png"
 
+import PathSection from "./PathSection"
+
 const PathForward = () => {
   return (
     <StyledSection id="path-forward">
@@ -45,61 +47,43 @@ const PathForward = () => {
               <h3>Our Strategic Priorities</h3>
             </div>
 
-            <div className="priority">
-              <div className="priority__image">
-                <img src={imgOne} alt="" />
-              </div>
-              <div className="priority__content">
-                <h3>Partner Expansion</h3>
-                <p>
-                  We will reach more families, and facilitate more pathways to
+            <PathSection
+              img={imgOne}
+              title="Partner Expansion"
+              content="We will reach more families, and facilitate more pathways to
                   participation, by aligning programming that has been
                   historically fragmented and incredibly difficult for families
-                  to navigate.
-                </p>
-              </div>
-              <div className="priority__icon">
-                <img src={iconOne} alt="" />
-              </div>
-            </div>
+                  to navigate."
+              icon={iconOne}
+              reverse={false}
+              index={1}
+            />
 
-            <div className="priority priority-reverse">
-              <div className="priority__image">
-                <img src={imgTwo} alt="" />
-              </div>
-              <div className="priority__content">
-                <h3>Knowledge Translation</h3>
-                <p>
-                  We will highlight the excellent research being done in adapted
+            <PathSection
+              img={imgTwo}
+              title="Knowledge Translation"
+              content="We will highlight the excellent research being done in adapted
                   sport and recreation, and continue to integrate research into
                   CAH-supported programs, collecting and analyzing data, as we
                   work to define best practices and deliver the highest quality
-                  programs possible.
-                </p>
-              </div>
-              <div className="priority__icon">
-                <img src={iconTwo} alt="" />
-              </div>
-            </div>
+                  programs possible."
+              icon={iconTwo}
+              reverse={true}
+              index={2}
+            />
 
-            <div className="priority">
-              <div className="priority__image">
-                <img src={imgThree} alt="" />
-              </div>
-              <div className="priority__content">
-                <h3>Increase Capacity</h3>
-                <p>
-                  We will continue to connect families to quality inclusive
+            <PathSection
+              img={imgThree}
+              title="Increase Capacity"
+              content="We will continue to connect families to quality inclusive
                   sport and recreation programs, while fostering countless
                   collaborations and relationships within the Calgary community,
                   by making the most of our funding, resources, and dedicated
-                  supports.
-                </p>
-              </div>
-              <div className="priority__icon">
-                <img src={iconThree} alt="" />
-              </div>
-            </div>
+                  supports."
+              icon={iconThree}
+              reverse={false}
+              index={3}
+            />
           </div>
         </div>
         <div className="upper-dots" />
