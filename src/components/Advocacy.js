@@ -33,6 +33,7 @@ const Advocacy = () => {
           toggleActions: "play none none none",
         },
       })
+      .add("start")
       .fromTo(
         `#advocacy .title`,
         {
@@ -63,7 +64,8 @@ const Advocacy = () => {
           stagger: {
             each: 0.4,
           },
-        }
+        },
+        "1+=start"
       )
 
     gsap
