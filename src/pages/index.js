@@ -7,6 +7,8 @@ import GoingDistance from "../components/GoingDistance"
 import Advocacy from "../components/Advocacy"
 import PathForward from "../components/PathForward"
 
+import Testimonial from "../components/Testimonial"
+
 const IndexPage = props => {
   const location = props.location
   return (
@@ -15,6 +17,7 @@ const IndexPage = props => {
       <Opening />
       <KeepingScore />
       <GoingDistance />
+      <Testimonial />
       <Advocacy />
       <PathForward />
     </Layout>

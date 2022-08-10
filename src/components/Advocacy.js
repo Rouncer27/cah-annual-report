@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import styled from "styled-components"
 import {
   B1Black,
@@ -18,7 +18,38 @@ import dots from "../images/advocacy/cah-annual-dotspng@3x.png"
 import logo from "../images/advocacy/cah-rgb-cah-stamp-rev@3x.png"
 import quote from "../images/advocacy/quote.png"
 
+import { gsap } from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
+gsap.registerPlugin(ScrollTrigger)
+
 const Advocacy = () => {
+  useEffect(() => {
+    gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: `#advocacy`,
+          markers: false,
+          start: "top 10%",
+          toggleActions: "play none none none",
+        },
+      })
+      .fromTo(
+        `.image`,
+        {
+          autoAlpha: 0,
+          y: 100,
+        },
+        {
+          autoAlpha: 1,
+          ease: "power2.out",
+          y: 0,
+          duration: 2,
+          stagger: {
+            each: 0.4,
+          },
+        }
+      )
+  }, [])
   return (
     <StyledSection id="advocacy">
       <div className="upper">

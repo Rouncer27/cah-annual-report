@@ -1,13 +1,6 @@
-import React from "react"
+import React, { useEffect } from "react"
 import styled from "styled-components"
-import {
-  B1Black,
-  H1Black,
-  H1Dark,
-  H2DarkTeal,
-  medWrapper,
-  Btn1One,
-} from "../styles/helpers"
+import { B1Black, H1Black, H1Dark, medWrapper } from "../styles/helpers"
 
 import families from "../images/distance/families.jpg"
 import peopleReached from "../images/distance/people-reached.jpg"
@@ -16,9 +9,40 @@ import subscibers from "../images/distance/subscibers.jpg"
 import unique from "../images/distance/unique.jpg"
 import views from "../images/distance/views.jpg"
 import topGrahpic from "../images/top-graphic.png"
-import logo from "../images/cah-logo.png"
+
+import { gsap } from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
+gsap.registerPlugin(ScrollTrigger)
 
 const GoingDistance = () => {
+  useEffect(() => {
+    gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: `#going-the-distance`,
+          markers: false,
+          start: "top 10%",
+          toggleActions: "play none none none",
+        },
+      })
+      .fromTo(
+        `.box`,
+        {
+          autoAlpha: 0,
+          y: 100,
+        },
+        {
+          autoAlpha: 1,
+          ease: "power2.out",
+          y: 0,
+          duration: 2,
+          stagger: {
+            each: 0.4,
+          },
+        }
+      )
+  }, [])
+
   return (
     <StyledSection id="going-the-distance">
       <div className="wrapper">
@@ -104,28 +128,6 @@ const GoingDistance = () => {
                 year one)
               </p>
             </div>
-          </div>
-        </div>
-
-        <div className="testimonial">
-          <div className="testimonial__logo">
-            <img src={logo} alt="" />
-          </div>
-          <div className="testimonial__content">
-            <p className="testimonial__content--para">
-              “Having CAH as collaborators means we are only limited by our
-              imagination as resources and partnerships are more readily
-              available now than we could ever have imagined.”
-            </p>
-            <p className="testimonial__content--name">
-              — Scott Godfrey, Program Coordinator, Active Life,
-            </p>
-            <p className="testimonial__content--org">
-              Autism Aspergers Friendship Society of Calgary
-            </p>
-            <a href="https://www.calgaryadaptedhub.com/about">
-              Connect and Collaborate with us
-            </a>
           </div>
         </div>
       </div>
@@ -219,54 +221,6 @@ const StyledSection = styled.section`
           ${B1Black};
           margin-top: 0.75rem;
         }
-      }
-    }
-  }
-
-  .testimonial {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-
-    &__logo {
-      width: 100%;
-      margin-bottom: 2.5rem;
-
-      @media (min-width: 768px) {
-        width: 20%;
-        margin-bottom: 0;
-        padding-right: 4.1rem;
-      }
-
-      img {
-        max-width: 25rem;
-      }
-    }
-
-    &__content {
-      width: 100%;
-
-      @media (min-width: 768px) {
-        width: 80%;
-      }
-
-      &--para {
-        ${H2DarkTeal};
-        margin-bottom: 1.5rem;
-      }
-
-      &--name {
-        ${B1Black};
-        margin: 0;
-      }
-
-      &--org {
-        ${B1Black};
-      }
-
-      a {
-        ${Btn1One};
       }
     }
   }
