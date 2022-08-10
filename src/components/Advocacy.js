@@ -34,7 +34,7 @@ const Advocacy = () => {
         },
       })
       .fromTo(
-        `.image`,
+        `#advocacy .image`,
         {
           autoAlpha: 0,
           y: 100,
