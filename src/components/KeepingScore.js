@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import styled from "styled-components"
 import {
   B1Black,
@@ -17,7 +17,43 @@ import play from "../images/icons/play.png"
 import bgImage from "../images/keeping-score-bg.jpg"
 import bgDots from "../images/top-dots-reversed.png"
 
+import { gsap } from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
+gsap.registerPlugin(ScrollTrigger)
+
 const KeepingScore = () => {
+  useEffect(() => {
+    const items = document.querySelectorAll(".score .icon-stat__stat--number")
+
+    gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: "#keeping-score",
+          markers: false,
+          start: "top 25%",
+          toggleActions: "play none none none",
+        },
+      })
+      .from(items, {
+        textContent: 0,
+        duration: 2,
+        ease: "power1.in",
+        snap: { textContent: 1 },
+        stagger: {
+          each: 0.25,
+          onUpdate: function () {
+            this.targets()[0].innerHTML = numberWithCommas(
+              Math.ceil(this.targets()[0].textContent)
+            )
+          },
+        },
+      })
+
+    function numberWithCommas(x) {
+      return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+    }
+  }, [])
+
   return (
     <StyledSection id="keeping-score">
       <div className="inner">
@@ -32,7 +68,7 @@ const KeepingScore = () => {
                   <img src={cah} alt="" />
                 </div>
                 <div className="icon-stat__stat">
-                  <span>35</span>
+                  <span className="icon-stat__stat--number">35</span>
                   <span>+</span>
                 </div>
               </div>
@@ -47,7 +83,7 @@ const KeepingScore = () => {
                   <img src={hands} alt="" />
                 </div>
                 <div className="icon-stat__stat">
-                  <span>21</span>
+                  <span className="icon-stat__stat--number">21</span>
                 </div>
               </div>
               <p>
@@ -61,7 +97,7 @@ const KeepingScore = () => {
                   <img src={info} alt="" />
                 </div>
                 <div className="icon-stat__stat">
-                  <span>5</span>
+                  <span className="icon-stat__stat--number">5</span>
                 </div>
               </div>
               <p>
@@ -74,7 +110,7 @@ const KeepingScore = () => {
                   <img src={mic} alt="" />
                 </div>
                 <div className="icon-stat__stat">
-                  <span>XXX</span>
+                  <span className="icon-stat__stat--number">25</span>
                 </div>
               </div>
               <p>
@@ -88,7 +124,7 @@ const KeepingScore = () => {
                   <img src={paper} alt="" />
                 </div>
                 <div className="icon-stat__stat">
-                  <span>55</span>
+                  <span className="icon-stat__stat--number">55</span>
                 </div>
               </div>
               <p>
@@ -102,7 +138,7 @@ const KeepingScore = () => {
                   <img src={play} alt="" />
                 </div>
                 <div className="icon-stat__stat">
-                  <span>4</span>
+                  <span className="icon-stat__stat--number">4</span>
                 </div>
               </div>
               <p>research projects currently underway</p>

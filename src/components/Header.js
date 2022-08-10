@@ -1,16 +1,16 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import styled from "styled-components"
 import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image"
 import MobileNav from "./MobileNav/MobileNav"
 import bgDots from "../images/top-dots.png"
 import { B1Black, colors, H1Dark, H2White, Btn1One } from "../styles/helpers"
-
 import pdfDownload from "../images/priorities/pdf-download.png"
+import { gsap } from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
+gsap.registerPlugin(ScrollTrigger)
 
 const Header = ({ homepage }) => {
-  console.log("IS HOME PAGE: ", homepage)
-
   const data = useStaticQuery(graphql`
     query mainImageQuery {
       file(relativePath: { eq: "opening-image.png" }) {
@@ -22,8 +22,64 @@ const Header = ({ homepage }) => {
   `)
   const image = getImage(data?.file?.childrenImageSharp[0]?.gatsbyImageData)
 
+  useEffect(() => {
+    const waves = document.querySelector(".main-logo")
+    const dots = document.querySelector(".bg-dots")
+    const headerContent = document.querySelector(".head-content")
+
+    gsap.fromTo(
+      waves,
+      { autoAlpha: 0, x: -200, ease: "power2.out" },
+      { autoAlpha: 1, x: 0, ease: "power2.out" }
+    )
+
+    gsap.fromTo(
+      dots,
+      { autoAlpha: 0, x: -500, ease: "power2.out", duration: 3 },
+      { autoAlpha: 1, x: 0, ease: "power2.out", duration: 3 }
+    )
+
+    if (headerContent) {
+      const h2Header = headerContent.querySelector("h2")
+      const h3Header = headerContent.querySelector("h3")
+      const pHeader = headerContent.querySelector(".linkbtn p")
+      const linkHeader = headerContent.querySelector(".linkbtn__link")
+      const pdfHeader = document.querySelector(".download__image")
+
+      gsap.fromTo(
+        h2Header,
+        { autoAlpha: 0, y: -50, ease: "power2.out", duration: 1.5 },
+        { autoAlpha: 1, y: 0, ease: "power2.out", duration: 1.5 }
+      )
+
+      gsap.fromTo(
+        h3Header,
+        { autoAlpha: 0, x: -100, ease: "power2.out", duration: 1 },
+        { autoAlpha: 1, x: 0, ease: "power2.out", duration: 1 }
+      )
+
+      gsap.fromTo(
+        pHeader,
+        { autoAlpha: 0, y: 100, ease: "power2.out", duration: 1 },
+        { autoAlpha: 1, y: 0, ease: "power2.out", duration: 1 }
+      )
+
+      gsap.fromTo(
+        linkHeader,
+        { autoAlpha: 0, x: 100, ease: "power2.out", duration: 1 },
+        { autoAlpha: 1, x: 0, ease: "power2.out", duration: 1 }
+      )
+
+      gsap.fromTo(
+        pdfHeader,
+        { autoAlpha: 0, x: -200, ease: "power2.out", duration: 1 },
+        { autoAlpha: 1, x: 0, ease: "power2.out", duration: 1 }
+      )
+    }
+  }, [])
+
   return (
-    <StyledHeader>
+    <StyledHeader id="header-intro">
       <MobileNav />
       <div className="head-wrap">
         <div className="head-left">
@@ -54,7 +110,9 @@ const Header = ({ homepage }) => {
                     Keep scrolling to read our digital report or download our
                     full report.
                   </p>
-                  <a href="#">Download Full Report</a>
+                  <div className="linkbtn__link">
+                    <a href="#">Download Full Report</a>
+                  </div>
                 </div>
               </div>
             </div>
