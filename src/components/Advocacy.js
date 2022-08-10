@@ -29,7 +29,7 @@ const Advocacy = () => {
         scrollTrigger: {
           trigger: `#advocacy`,
           markers: false,
-          start: "top 15%",
+          start: "top 40%",
           toggleActions: "play none none none",
         },
       })

@@ -20,8 +20,8 @@ const PathSection = ({ img, title, content, icon, reverse, index }) => {
       .timeline({
         scrollTrigger: {
           trigger: `#item-trigger-${index}`,
-          markers: true,
-          start: "top 40%",
+          markers: false,
+          start: "top 20%",
           toggleActions: "play none none none",
         },
       })
