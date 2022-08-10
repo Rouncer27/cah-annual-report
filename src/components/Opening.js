@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
@@ -7,7 +7,69 @@ import { B1Black, H2DarkTeal, medWrapper } from "../styles/helpers"
 import david from "../images/devid-legg.png"
 import carolyn from "../images/carolyn-emery.png"
 
+import DavidLegg from "./DavidLegg"
+import Carolyn from "./Carolyn"
+
+import { gsap } from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
+import { DrawSVGPlugin } from "gsap/DrawSVGPlugin"
+gsap.registerPlugin(ScrollTrigger)
+gsap.registerPlugin(DrawSVGPlugin)
+
 const Opening = () => {
+  useEffect(() => {
+    const david = document.querySelector(".david-sign .david")
+    const l = document.querySelector(".david-sign .l")
+    const egg = document.querySelector(".david-sign .egg")
+    const stick = document.querySelector(".david-sign .stick")
+
+    const carolyn = document.querySelector(".carolyn-svg .carolyn-svg-first")
+    const emery = document.querySelector(".carolyn-svg .carolyn-svg-last")
+
+    gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: `#david-trigger`,
+          markers: false,
+          start: "top 40%",
+          toggleActions: "play none none none",
+          scrub: false,
+        },
+      })
+      .add("start")
+      .fromTo(
+        david,
+        { drawSVG: "100% 100%" },
+        { duration: 1.5, drawSVG: "0% 100%", ease: "none" }
+      )
+      .fromTo(
+        stick,
+        { drawSVG: 0 },
+        { duration: 0.25, drawSVG: "100%", ease: "none" }
+      )
+      .fromTo(
+        l,
+        { drawSVG: 0 },
+        { duration: 1.25, drawSVG: "100%", ease: "none" },
+        "+=0.5"
+      )
+      .fromTo(
+        egg,
+        { drawSVG: 0 },
+        { duration: 1.25, drawSVG: "100%", ease: "none" }
+      )
+      .fromTo(
+        carolyn,
+        { drawSVG: 0 },
+        { duration: 1, drawSVG: "100%", ease: "none" }
+      )
+      .fromTo(
+        emery,
+        { drawSVG: 0 },
+        { duration: 1, drawSVG: "100%", ease: "none" }
+      )
+  }, [])
+
   const data = useStaticQuery(graphql`
     query openingImagesQuery {
       imgOne: file(relativePath: { eq: "opening-one.jpg" }) {
@@ -82,8 +144,10 @@ const Opening = () => {
             </p>
             <div className="signature">
               <div className="signature__images">
-                <img src={david} alt="" />
-                <img src={carolyn} alt="" />
+                <DavidLegg />
+                <Carolyn />
+                {/* <img src={david} alt="" />
+                <img src={carolyn} alt="" /> */}
               </div>
               <p>Dr. David Legg & Dr. Carolyn Emery</p>
               <p>Co-Chairs, Calgary Adapted Hub powered by Jumpstart</p>
@@ -165,10 +229,12 @@ const SectionStyled = styled.section`
         flex-wrap: wrap;
         justify-content: flex-start;
 
-        img {
-          width: 33.333333%;
-          margin: 0;
-          margin-right: 4rem;
+        .david-sign {
+          margin-right: 3rem;
+        }
+
+        .carolyn-svg {
+          margin-left: 3rem;
         }
       }
 
