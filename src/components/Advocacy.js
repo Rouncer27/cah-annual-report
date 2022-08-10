@@ -100,7 +100,7 @@ const Advocacy = () => {
           trigger: "#advocacy",
           markers: false,
           start: "top 100%",
-          end: "bottom -200px",
+          end: "bottom -500px",
           scrub: 1.5,
         },
       })
@@ -123,7 +123,7 @@ const Advocacy = () => {
         },
         {
           ease: "none",
-          x: 0,
+          x: 200,
         },
         "start"
       )
@@ -214,9 +214,9 @@ const StyledSection = styled.section`
   .dots {
     position: absolute;
     bottom: 0;
-    left: 0;
+    left: -20rem;
     width: calc(408.6rem / 2);
-    height: calc(74.1rem / 3);
+    height: 20rem;
     background-image: url(${dots});
     background-position: center;
     background-size: cover;
