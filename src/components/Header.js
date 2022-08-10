@@ -27,60 +27,62 @@ const Header = ({ homepage }) => {
     const dots = document.querySelector(".bg-dots")
     const headerContent = document.querySelector(".head-content")
 
-    gsap.fromTo(
-      waves,
-      { autoAlpha: 0, x: -200, ease: "power2.out" },
-      { autoAlpha: 1, x: 0, ease: "power2.out" }
-    )
-
-    gsap.fromTo(
-      dots,
-      { autoAlpha: 0, x: -500, ease: "power2.out", duration: 3 },
-      { autoAlpha: 1, x: 0, ease: "power2.out", duration: 3 }
-    )
-
-    if (headerContent) {
-      const h2Header = headerContent.querySelector("h2")
-      const h3Header = headerContent.querySelector("h3")
-      const pHeader = headerContent.querySelector(".linkbtn p")
-      const linkHeader = headerContent.querySelector(".linkbtn__link")
-      const pdfHeader = document.querySelector(".download__image")
-
+    if (homepage) {
       gsap.fromTo(
-        h2Header,
-        { autoAlpha: 0, y: -50, ease: "power2.out", duration: 1.5 },
-        { autoAlpha: 1, y: 0, ease: "power2.out", duration: 1.5 }
+        waves,
+        { autoAlpha: 0, x: -200, ease: "power2.out" },
+        { autoAlpha: 1, x: 0, ease: "power2.out" }
       )
 
       gsap.fromTo(
-        h3Header,
-        { autoAlpha: 0, x: -100, ease: "power2.out", duration: 1 },
-        { autoAlpha: 1, x: 0, ease: "power2.out", duration: 1 }
+        dots,
+        { autoAlpha: 0, x: -500, ease: "power2.out", duration: 3 },
+        { autoAlpha: 1, x: 0, ease: "power2.out", duration: 3 }
       )
 
-      gsap.fromTo(
-        pHeader,
-        { autoAlpha: 0, y: 100, ease: "power2.out", duration: 1 },
-        { autoAlpha: 1, y: 0, ease: "power2.out", duration: 1 }
-      )
+      if (headerContent) {
+        const h2Header = headerContent.querySelector("h2")
+        const h3Header = headerContent.querySelector("h3")
+        const pHeader = headerContent.querySelector(".linkbtn p")
+        const linkHeader = headerContent.querySelector(".linkbtn__link")
+        const pdfHeader = document.querySelector(".download__image")
 
-      gsap.fromTo(
-        linkHeader,
-        { autoAlpha: 0, x: 100, ease: "power2.out", duration: 1 },
-        { autoAlpha: 1, x: 0, ease: "power2.out", duration: 1 }
-      )
+        gsap.fromTo(
+          h2Header,
+          { autoAlpha: 0, y: -50, ease: "power2.out", duration: 1.5 },
+          { autoAlpha: 1, y: 0, ease: "power2.out", duration: 1.5 }
+        )
 
-      gsap.fromTo(
-        pdfHeader,
-        { autoAlpha: 0, x: -200, ease: "power2.out", duration: 1 },
-        { autoAlpha: 1, x: 0, ease: "power2.out", duration: 1 }
-      )
+        gsap.fromTo(
+          h3Header,
+          { autoAlpha: 0, x: -100, ease: "power2.out", duration: 1 },
+          { autoAlpha: 1, x: 0, ease: "power2.out", duration: 1 }
+        )
+
+        gsap.fromTo(
+          pHeader,
+          { autoAlpha: 0, y: 100, ease: "power2.out", duration: 1 },
+          { autoAlpha: 1, y: 0, ease: "power2.out", duration: 1 }
+        )
+
+        gsap.fromTo(
+          linkHeader,
+          { autoAlpha: 0, x: 100, ease: "power2.out", duration: 1 },
+          { autoAlpha: 1, x: 0, ease: "power2.out", duration: 1 }
+        )
+
+        gsap.fromTo(
+          pdfHeader,
+          { autoAlpha: 0, x: -200, ease: "power2.out", duration: 1 },
+          { autoAlpha: 1, x: 0, ease: "power2.out", duration: 1 }
+        )
+      }
     }
   }, [])
 
   return (
     <StyledHeader id="header-intro">
-      <MobileNav />
+      {homepage && <MobileNav />}
       <div className="head-wrap">
         <div className="head-left">
           <div className="main-logo">
