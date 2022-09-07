@@ -150,7 +150,11 @@ const Advocacy = () => {
               those demonstrating innovation and exceptional commitment to
               creating an inclusive city.
             </p>
-            <a href="https://www.calgaryadaptedhub.com/about/community-advisory-committee">
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://www.calgaryadaptedhub.com/about/community-advisory-committee"
+            >
               Meet the committee members
             </a>
           </div>

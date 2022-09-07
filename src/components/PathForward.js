@@ -20,7 +20,7 @@ import iconThree from "../images/priorities/group-3554@3x.png"
 
 import bgDots from "../images/priorities/background-dots.png"
 import logo from "../images/priorities/cah-logo.png"
-import pdfDownload from "../images/priorities/pdf-download.png"
+import pdfDownload from "../images/priorities/pdf-download-3.png"
 
 import PathSection from "./PathSection"
 

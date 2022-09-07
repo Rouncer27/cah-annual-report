@@ -7,7 +7,7 @@ import peopleReached from "../images/distance/people-reached.jpg"
 import social from "../images/distance/social.jpg"
 import subscibers from "../images/distance/subscibers.jpg"
 import unique from "../images/distance/unique.jpg"
-import views from "../images/distance/views.jpg"
+import views from "../images/distance/views-2.jpg"
 import topGrahpic from "../images/top-graphic.png"
 
 import { gsap } from "gsap"

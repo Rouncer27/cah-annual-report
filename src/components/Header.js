@@ -5,7 +5,9 @@ import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image"
 import MobileNav from "./MobileNav/MobileNav"
 import bgDots from "../images/top-dots.png"
 import { B1Black, colors, H1Dark, H2White, Btn1One } from "../styles/helpers"
-import pdfDownload from "../images/priorities/pdf-download.png"
+
+import pdfDownload from "../images/priorities/pdf-download-2.png"
+
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 gsap.registerPlugin(ScrollTrigger)

@@ -17,11 +17,23 @@ const Footer = () => {
         </div>
         <div className="foot-sec footer-info">
           <h3>For More Information Go To</h3>
-          <a href="https://www.calgaryadaptedhub.com/programs">Program Info</a>
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://www.calgaryadaptedhub.com/programs"
+          >
+            Program Info
+          </a>
         </div>
         <div className="foot-sec footer-website">
           <h3>Visit Our Full Website</h3>
-          <a href="https://www.calgaryadaptedhub.com/">Website Info</a>
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://www.calgaryadaptedhub.com/"
+          >
+            Website Info
+          </a>
         </div>
         <div className="foot-sec footer-social">
           <ul>

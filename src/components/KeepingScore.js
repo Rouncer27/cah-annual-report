@@ -83,7 +83,7 @@ const KeepingScore = () => {
                   <img src={hands} alt="" />
                 </div>
                 <div className="icon-stat__stat">
-                  <span className="icon-stat__stat--number">21</span>
+                  <span className="icon-stat__stat--number">20</span>
                 </div>
               </div>
               <p>
@@ -97,7 +97,7 @@ const KeepingScore = () => {
                   <img src={info} alt="" />
                 </div>
                 <div className="icon-stat__stat">
-                  <span className="icon-stat__stat--number">5</span>
+                  <span className="icon-stat__stat--number">6</span>
                 </div>
               </div>
               <p>
@@ -110,7 +110,7 @@ const KeepingScore = () => {
                   <img src={mic} alt="" />
                 </div>
                 <div className="icon-stat__stat">
-                  <span className="icon-stat__stat--number">25</span>
+                  <span className="icon-stat__stat--number">426</span>
                 </div>
               </div>
               <p>
@@ -124,7 +124,7 @@ const KeepingScore = () => {
                   <img src={paper} alt="" />
                 </div>
                 <div className="icon-stat__stat">
-                  <span className="icon-stat__stat--number">55</span>
+                  <span className="icon-stat__stat--number">64</span>
                 </div>
               </div>
               <p>
