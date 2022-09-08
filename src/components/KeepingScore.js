@@ -124,7 +124,7 @@ const KeepingScore = () => {
                   <img src={paper} alt="" />
                 </div>
                 <div className="icon-stat__stat">
-                  <span className="icon-stat__stat--number">64</span>
+                  <span className="icon-stat__stat--number">71</span>
                 </div>
               </div>
               <p>
