@@ -104,7 +104,7 @@ const GoingDistance = () => {
               <img src={views} alt="" />
             </div>
             <div className="box__content">
-              <p className="box__content--number">527</p>
+              <p className="box__content--number">560</p>
               <p>
                 views of 9 Research & Community Engagement Seminars (live and
                 on-demand)
@@ -140,7 +140,7 @@ const GoingDistance = () => {
               <img src={subscibers} alt="" />
             </div>
             <div className="box__content">
-              <p className="box__content--number">245</p>
+              <p className="box__content--number">269</p>
               <p>subscribers received the CAH newsletter each month</p>
             </div>
           </div>
@@ -150,7 +150,7 @@ const GoingDistance = () => {
               <img src={social} alt="" />
             </div>
             <div className="box__content">
-              <p className="box__content--number">1340</p>
+              <p className="box__content--number">1535</p>
               <p>
                 followers on social media and growing (an increase of 74% over
                 year one)

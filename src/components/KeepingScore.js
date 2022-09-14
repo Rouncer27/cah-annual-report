@@ -110,7 +110,7 @@ const KeepingScore = () => {
                   <img src={mic} alt="" />
                 </div>
                 <div className="icon-stat__stat">
-                  <span className="icon-stat__stat--number">426</span>
+                  <span className="icon-stat__stat--number">538</span>
                 </div>
               </div>
               <p>
