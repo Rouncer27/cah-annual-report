@@ -23,6 +23,7 @@ import logo from "../images/priorities/cah-logo.png"
 import pdfDownload from "../images/priorities/pdf-download-3.png"
 
 import PathSection from "./PathSection"
+import downloadFile from "../downloads/CalgaryAdaptedHub-Annual21-22.pdf"
 
 const PathForward = () => {
   return (
@@ -97,7 +98,9 @@ const PathForward = () => {
               <img src={logo} alt="" />
             </div>
             <div className="lower-content__button">
-              <a href="#">Download Full Report</a>
+              <a href={downloadFile} download>
+                Download Full Report
+              </a>
             </div>
           </div>
 

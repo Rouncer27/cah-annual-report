@@ -7,13 +7,17 @@ import Facebook from "../Icons/Facebook"
 import Twitter from "../Icons/Twitter"
 import { Link } from "gatsby"
 
+import downloadFile from "../downloads/CalgaryAdaptedHub-Annual21-22.pdf"
+
 const Footer = () => {
   return (
     <StyledFooter>
       <div className="wrapper">
         <div className="foot-sec footer-download">
           <h3>Download Report</h3>
-          <a href="#">Download Here</a>
+          <a href={downloadFile} download>
+            Download Full Report
+          </a>
         </div>
         <div className="foot-sec footer-info">
           <h3>For More Information Go To</h3>

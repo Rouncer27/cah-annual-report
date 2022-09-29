@@ -7,6 +7,7 @@ import bgDots from "../images/top-dots.png"
 import { B1Black, colors, H1Dark, H2White, Btn1One } from "../styles/helpers"
 
 import pdfDownload from "../images/priorities/pdf-download-2.png"
+import downloadFile from '../downloads/CalgaryAdaptedHub-Annual21-22.pdf' 
 
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
@@ -115,7 +116,7 @@ const Header = ({ homepage }) => {
                     full report.
                   </p>
                   <div className="linkbtn__link">
-                    <a href="#">Download Full Report</a>
+                    <a href={downloadFile} download>Download Full Report</a>
                   </div>
                 </div>
               </div>
