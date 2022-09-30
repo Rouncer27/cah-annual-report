@@ -3,9 +3,12 @@ module.exports = {
     title: `Calgary Adapted Hub`,
     description: `Calgary Adapted Hub`,
     author: `@switchbackc4ever`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    metaImg: `src/images/social-media-default.png`,
+    siteLogo: `src/images/main-logo.png`,
+    siteUrl: `https://annualreport.calgaryadaptedhub.com/`,
   },
   plugins: [
+    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     `gatsby-plugin-styled-components`,
     {
@@ -27,6 +30,22 @@ module.exports = {
         theme_color: `#e22726`,
         display: `minimal-ui`,
         icon: `src/images/favicon.png`, // This path is relative to the root of the site.
+      },
+    },
+    `gatsby-plugin-sitemap`,
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        host: "https://annualreport.calgaryadaptedhub.com/",
+        sitemap:
+          "https://annualreport.calgaryadaptedhub.com/sitemap/sitemap-index.xml",
+        policy: [{ userAgent: "*", allow: "/" }],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-canonical-urls`,
+      options: {
+        siteUrl: `https://annualreport.calgaryadaptedhub.com/`,
       },
     },
     `gatsby-plugin-netlify`,
