@@ -1,5 +1,5 @@
 import React from "react"
-import Helmet from "react-helmet"
+import { Helmet } from "react-helmet"
 
 export default React.memo(
   ({
@@ -19,16 +19,21 @@ export default React.memo(
       {
         "@context": "http://schema.org",
         "@type": "ProfessionalService",
-        "@id": "https://annualreport.calgaryadaptedhub.com/",
+        "@id": "https://www.calgaryadaptedhub.com/",
         name: "Calgary Adapted Hub",
         alternateName: "Calgary Adapted Hub",
         logo: logo,
         telephone: "",
         email: "info@calgaryadaptedhub.com",
-        sameAs: [],
-        url: "https://annualreport.calgaryadaptedhub.com/",
+        sameAs: [
+          "https://www.instagram.com/yycadaptedhub/",
+          "https://www.linkedin.com/company/calgary-adapted-hub-powered-by-jumpstart/",
+          "https://twitter.com/YYCAdaptedHub",
+          "https://www.facebook.com/yycadaptedhub",
+        ],
+        url: "https://www.calgaryadaptedhub.com/",
         image: image,
-        priceRange: "$",
+        priceRange: "",
         description: description,
         address: {
           "@type": "PostalAddress",
@@ -42,32 +47,32 @@ export default React.memo(
           {
             "@type": "OpeningHoursSpecification",
             dayOfWeek: ["Monday"],
-            opens: "",
-            closes: "",
+            opens: "8:00am",
+            closes: "5:00pm",
           },
           {
             "@type": "OpeningHoursSpecification",
             dayOfWeek: ["Tuesday"],
-            opens: "",
-            closes: "",
+            opens: "8:00am",
+            closes: "5:00pm",
           },
           {
             "@type": "OpeningHoursSpecification",
             dayOfWeek: ["Wednesday"],
-            opens: "",
-            closes: "",
+            opens: "8:00am",
+            closes: "5:00pm",
           },
           {
             "@type": "OpeningHoursSpecification",
             dayOfWeek: ["Thursday"],
-            opens: "",
-            closes: "",
+            opens: "8:00am",
+            closes: "5:00pm",
           },
           {
             "@type": "OpeningHoursSpecification",
             dayOfWeek: ["Friday"],
-            opens: "",
-            closes: "",
+            opens: "8:00am",
+            closes: "5:00pm",
           },
           {
             "@type": "OpeningHoursSpecification",
