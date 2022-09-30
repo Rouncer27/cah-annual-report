@@ -13,7 +13,10 @@ const IndexPage = props => {
   const location = props.location
   return (
     <Layout location={location}>
-      <Seo title="CAH Home Page" />
+      <Seo
+        title="Calgary Adapted Hub - Annual Report"
+        description="Calgary Adapted Hub - Annual Report.Calgary Adapted Hub believes no one should have to sit on the sidelines. We’re working collectively to remove barriers to participation in sport programming at the community level. And we’re paving the way for organizations across the country to follow."
+      />
       <Opening />
       <KeepingScore />
       <GoingDistance />
