@@ -14,7 +14,7 @@ const IndexPage = props => {
   return (
     <Layout location={location}>
       <Seo
-        title="Calgary Adapted Hub - Annual Report"
+        title="Calgary Adapted Hub - Annual Report - Change the Game"
         description="Calgary Adapted Hub - Annual Report.Calgary Adapted Hub believes no one should have to sit on the sidelines. We’re working collectively to remove barriers to participation in sport programming at the community level. And we’re paving the way for organizations across the country to follow."
       />
       <Opening />
